@@ -29,7 +29,7 @@ function displayTable(customers, orders) {
   box = ``;
   for (let order of orders) {
     let customer = customers.find(
-      (customer) => customer.id === `${order.customer_id}`
+      (customer) => customer.id == `${order.customer_id}`
     );
     if (customer) {
       box += `<tr><td>${order.id}</td><td>${customer.name}</td><td>${
