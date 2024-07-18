@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <link rel="icon" type="image/x-icon" href="images/logo.png" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Transactions log</title>
+    <!-- npx tailwindcss -i ./src/css/input.css -o ./dist/output.css --watch -->
+  </head>
+  <body class="bg-primary">
+    <section class="landing">
+      <div class="container mx-auto">
+        <div class="row-custom">
+          <div class="w-full">
+            <article>
+              <h1 class="font-bold text-7xl text-darkT">Welcome admin</h1>
+              <p class="font-bold text-4xl text-darkT">
+                Tracking recent transactions
+              </p>
+            </article>
+          </div>
+          <div class="chart w-full">
+            <canvas id="myChart"></canvas>
+          </div>
+        </div>
+        <div class="row-custom justify-center items-center w-full">
+          <div class="root">
+            <h2>Search...</h2>
+            <input
+              type="text"
+              class=""
+              id="searchInput"
+              placeholder="Search..."
+              title="Type in a name"
+            />
+
+            <table id="table" class="p-10">
+              <thead>
+                <tr class="titles bg-darkT text-white">
+                  <th
+                    style="width: 5%"
+                    class="text-center"
+                    onclick="sortItems('id')"
+                  >
+                    T.no
+                  </th>
+                  <th
+                    style="width: 30%"
+                    class="text-center"
+                    id="name"
+                    onclick="sortItems('name')"
+                  >
+                    name
+                  </th>
+                  <th
+                    style="width: 15%"
+                    class="text-center"
+                    onclick="sortItems('amount')"
+                  >
+                    amount
+                  </th>
+                  <th
+                    style="width: 15%"
+                    class="text-center"
+                    onclick="sortItems('date')"
+                  >
+                    date
+                  </th>
+                  <th style="width: 30%" class="text-center">Graph</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
