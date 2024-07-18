@@ -3,20 +3,20 @@ let orders, customers;
 const table = document.getElementById("table");
 
 async function getCustomers() {
-  const api = await fetch(`http://localhost:3000/customers`);
+  const api = await fetch(`https://my-json-server.typicode.com/B-a-d-r-a-n/Customer-tracking/customers`);
   const response = await api.json();
   customers = response;
 }
 async function getTransactions() {
-  const api = await fetch(`http://localhost:3000/transactions`);
+  const api = await fetch(`https://my-json-server.typicode.com/B-a-d-r-a-n/Customer-tracking/transactions`);
   const response = await api.json();
   orders = response;
 }
 async function GetData() {
-  const api = await fetch(`http://localhost:3000/customers`);
+  const api = await fetch(`https://my-json-server.typicode.com/B-a-d-r-a-n/Customer-tracking/customers`);
   const response = await api.json();
   customers = response;
-  const api1 = await fetch(`http://localhost:3000/transactions`);
+  const api1 = await fetch(`https://my-json-server.typicode.com/B-a-d-r-a-n/Customer-tracking/transactions`);
   const response2 = await api1.json();
   orders = response2;
 
